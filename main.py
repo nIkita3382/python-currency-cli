@@ -3,13 +3,13 @@ import sys
 
 
 BASE_URL = "https://v6.exchangerate-api.com/v6/" #Базовая ссылка
-API_KEY = "38bc386b7b0424144fb3caad/latest/"
+API_KEY = "{YOUR_API_KEY}/latest/"
 def fetch_exchange_rate(base_currency, target_currency):
     url = f"{BASE_URL}{API_KEY}{base_currency.upper()}"
     
     try:
         response = requests.get(url, timeout=5)
-        response.raise_for_status() #Автоматическая обрабтка ошибок 4хх 
+        response.raise_for_status() #Автоматическая обрабтка ошибок 4хх-5xx
         
         data = response.json()
         
