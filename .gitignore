@@ -1,0 +1,12 @@
+# Python files and caches
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.venv/
+my_currency_env/  # Если вы используете именно это имя
+
+# API Keys and sensitive data
+.env
+config.ini
